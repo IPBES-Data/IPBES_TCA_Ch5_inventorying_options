@@ -25,12 +25,12 @@ Once finalised, the final repo will be published on Zenodo
   - Rainer <Rainer.Krug@Senckenberg.de> <Rainer@krugs.de>
 
 - **email to**:
-	- Victoria Reyes Garcia <Victoria.Reyes@uab.cat>
-	- Karina Benessaiah <karinaben@gmail.com>
-  - Rafael Almeida Magris <rafael.icmbio@gmail.com>, 
-  - Martha Bonilla <martha.bonilla@inecol.mx>, 
-  - Ram Pandit <ram.pandit@uwa.edu.au>, 
-  - Koji Miwa <k-miwa@iges.or.jp>, 
+  - Victoria Reyes Garcia <Victoria.Reyes@uab.cat>
+  - Karina Benessaiah <karinaben@gmail.com>
+  - Rafael Almeida Magris <rafael.icmbio@gmail.com>,
+  - Martha Bonilla <martha.bonilla@inecol.mx>,
+  - Ram Pandit <ram.pandit@uwa.edu.au>,
+  - Koji Miwa <k-miwa@iges.or.jp>,
   - TSU Data <Rainer.Krug@Senckenberg.de>
 
 - **email cc**:
@@ -52,8 +52,8 @@ Once finalised, the final repo will be published on Zenodo
 
 - [ ] Update of terms
 - [ ] Return numbers of hits for refinement if needed (R1 AND R2 on corpus)
-- [ ] extract 10 sets of random 100 papers for each final Corpus for manual review
+- [ ] Further steps need to be discussed with the authors. The large numbers make manual review impossible.
 
 ## Reports
 
-- [search]()
+- [Report](Report.html)

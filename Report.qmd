@@ -86,6 +86,22 @@ R1_st <- readLines(file.path("input", "R1.txt")) |>
 R2_st <- readLines(file.path("input", "R2.txt")) |>
     paste(collapse = " ")
 
+policy_st <- readLines(file.path("input", "policy.txt")) |>
+    paste(collapse = " ")
+
+nature_st <- readLines(file.path("input", "nature.txt")) |>
+    paste(collapse = " ")
+
+tfc_st <- readLines(file.path("input", "tfc.txt")) |>
+    paste(collapse = " ")
+
+nature_st_l <- list()
+st <- readLines(file.path("input", "nature.txt")) |>
+    gsub(pattern = "OR ", replacement = "")
+nature_st_l[[1]] <- paste(collapse = " OR ", st[1:25])
+nature_st_l[[2]] <- paste(collapse = " OR ", st[26:50])
+nature_st_l[[3]] <- paste(collapse = " OR ", st[51:length(st)])
+rm(st)
 ```
 
 ## Working Title
@@ -101,11 +117,13 @@ IPBES_TCA_Ch5_inventoring_options
 
 ## Introduction
 
-All searches are done on all works in OpenAlex. The search in the TCA Corpus is not possibly at the moment, but we are working on it.
+All searches are done on Using the [OpenAlex](https://openalex.org/){target=_blank} database.
+
+In addition, all searches are run in combination with the search term foir nature.
 
 ### The following steps will be done in documented in this report:
 
-- [x] Do asearch with `R1_st` and `R2_st` and determine the  number of hits
+- [ ] Do asearch with `R1_st` and `R2_st` and determine the  number of hits
 - [ ] Should the copplete `**R1** AND **R2**` be downloaded, or only a random subsets?
 
 
@@ -113,16 +131,86 @@ All searches are done on all works in OpenAlex. The search in the TCA Corpus is 
 
 The search terms are based on the [shared google doc](https://docs.google.com/document/d/1_FmxYVhpv2Bu2Gbbxb7cWc49f3soFvc64Qau_x2RAqI){target=_blank}. They are cleaned up for the usage in [OpenAlex](https://openalex.org/){target=_blank}.
 
-## R1
 
-The search terms is [R1](input/R1.txt){target=_blank}
+## Nature
+
+The search terms is [nature](input/nature.txt){target=_blank}
 
 ```{r}
-#| label: get get_R1_count
+#| label: get_nature_l_count
+#|
+
+nature_l_count <- sapply(
+    nature_st_l,
+    function(st) {
+        openalexR::oa_fetch(
+            title_and_abstract.search = compact(st),
+            count_only = TRUE,
+            verbose = TRUE
+        )[, "count"]
+    }
+) |>
+    sum()
+```
+
+
+## Nature
+
+The search terms is [nature](input/nature.txt){target=_blank}
+
+```{r}
+#| label: get_nature_count
+#|
+
+nature_count <- openalexR::oa_fetch(
+    title_and_abstract.search = compact(paste0("(", nature_st, ")")),
+    count_only = TRUE,
+    verbose = TRUE
+)[, "count"]
+```
+
+## TFC
+
+The search terms is [tfc](input/tfc.txt){target=_blank}
+
+```{r}
+#| label: get_tfc_count
+#|
+
+tfc_count <- openalexR::oa_fetch(
+    title_and_abstract.search = compact(paste0("(", tfc_st, ")")),
+    count_only = TRUE,
+    verbose = TRUE
+)[, "count"]
+```
+
+
+## TFC AND Nature
+
+The search terms is [tfc](input/tfc.txt){target=_blank} AND [nature](input/nature.txt){target=_blank}
+
+```{r}
+#| label: get_tfc_nature_count
+#|
+
+tfc_nature_count <- openalexR::oa_fetch(
+    title_and_abstract.search = compact(paste0("(", tfc_st, ") AND (", nature_st, ")")),
+    count_only = TRUE,
+    verbose = TRUE
+)[, "count"]
+```
+
+
+## R1
+
+The search terms is [R1](input/R1.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
+
+```{r}
+#| label: get_R1_count
 #|
 
 R1_count <- openalexR::oa_fetch(
-    title_and_abstract.search = compact(R1_st),
+    title_and_abstract.search = compact(paste0("(", R1_st, ") AND (", nature_st, ")")),
     count_only = TRUE,
     verbose = TRUE
 )[, "count"]
@@ -131,14 +219,14 @@ R1_count <- openalexR::oa_fetch(
 
 ## R2
 
-The search terms is [R2](input/R2.txt){target=_blank}
+The search terms is [R2](input/R2.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
 
 ```{r}
-#| label: get get_R2_count
+#| label: get_R2_count
 #|
 
 R2_count <- openalexR::oa_fetch(
-    title_and_abstract.search = compact(R2_st),
+    title_and_abstract.search = compact(paste0("(", R2_st, ") AND (", nature_st, ")")),
     count_only = TRUE,
     verbose = TRUE
 )[, "count"]
@@ -146,25 +234,66 @@ R2_count <- openalexR::oa_fetch(
 
 ## R1 AND R2
 
-The search term is [R1](input/R1.txt){target=_blank} AND [R2](input/R2.txt){target=_blank}
+The search term is [R1](input/R1.txt){target=_blank} AND [R2](input/R2.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
 
 ```{r}
-#| label: get get_R2_R2_count
+#| label: get_R1_R2_count
 #|
 
 R1_R2_count <- openalexR::oa_fetch(
-    title_and_abstract.search = compact(paste0("(", R1_st, ") AND (", R2_st, ")")),
+    title_and_abstract.search = compact(paste0("(", R1_st, ") AND (", R2_st, ") AND (", nature_st, ")")),
     count_only = TRUE,
     verbose = TRUE
 )[, "count"]
+```
+
+## Policy
+
+The search terms is [policy](input/policy.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
+
+```{r}
+#| label: get_policy_count
+#|
+
+policy_count <- openalexR::oa_fetch(
+    title_and_abstract.search = compact(paste0("(", policy_st, ") AND (", nature_st, ")")),
+    count_only = TRUE,
+    verbose = TRUE
+)[, "count"]
+```
+
+
+
+## TEST - R1 AND R2 AND TFC AND Nature
+
+The search term is [R1](input/R1.txt){target=_blank} AND [R2](input/R2.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
+
+```{r}
+#| label: get_test_count
+#| eval: false
+#|
+
+nature_l_count <- sapply(
+    nature_st_l,
+    function(st) {
+        openalexR::oa_fetch(
+            title_and_abstract.search = compact(paste0("(", R1_st, ") AND (", st, ") AND (", tfc_st, ")")),
+            count_only = TRUE,
+            verbose = TRUE
+        )[, "count"]
+    }
+) |>
+    sum()
 
 ```
 
-## Results
-
 ### Number of hits
-- **R1:**: `r formatC(R1_count, format="f", big.mark=",", digits=0)` hits
-- **R2:** `r formatC(R2_count, format="f", big.mark=",", digits=0)` hits
-- **R1 AND R2:** `r formatC(R1_R2_count, format="f", big.mark=",", digits=0)` hits
+- **nature:** `r formatC(nature_count, format="f", big.mark=",", digits=0)` hits
+<!-- - **nature_l:** `r formatC(nature_l_count, format="f", big.mark=",", digits=0)` hits -->
+- **tfc:** `r formatC(tfc_count, format="f", big.mark=",", digits=0)` hits
+- **tfc AND nature:** `r formatC(tfc_nature_count, format="f", big.mark=",", digits=0)` hits
+- **R1 AND nature:** `r formatC(R1_count, format="f", big.mark=",", digits=0)` hits
+- **R2 AND nature:** `r formatC(R2_count, format="f", big.mark=",", digits=0)` hits
+- **policy AND nature:** `r formatC(policy_count, format="f", big.mark=",", digits=0)` hits
+- **R1 AND R2 AND nature:** `r formatC(R1_R2_count, format="f", big.mark=",", digits=0)` hits
 
-These are numbers which can easily be downloaded, either as a single set or several random sets.

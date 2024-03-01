@@ -3079,16 +3079,21 @@ vertical-align: -.125em;
   <ul>
   <li><a href="#working-title" id="toc-working-title" class="nav-link active" data-scroll-target="#working-title">Working Title</a></li>
   <li><a href="#code-repo" id="toc-code-repo" class="nav-link" data-scroll-target="#code-repo">Code repo</a></li>
-  <li><a href="#build-no-5" id="toc-build-no-5" class="nav-link" data-scroll-target="#build-no-5">Build No: 5</a></li>
+  <li><a href="#build-no-28" id="toc-build-no-28" class="nav-link" data-scroll-target="#build-no-28">Build No: 28</a></li>
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a>
   <ul>
   <li><a href="#the-following-steps-will-be-done-in-documented-in-this-report" id="toc-the-following-steps-will-be-done-in-documented-in-this-report" class="nav-link" data-scroll-target="#the-following-steps-will-be-done-in-documented-in-this-report">The following steps will be done in documented in this report:</a></li>
   </ul></li>
   <li><a href="#step-1-determination-of-numbers" id="toc-step-1-determination-of-numbers" class="nav-link" data-scroll-target="#step-1-determination-of-numbers">Step 1: Determination of numbers</a></li>
+  <li><a href="#nature" id="toc-nature" class="nav-link" data-scroll-target="#nature">Nature</a></li>
+  <li><a href="#nature-1" id="toc-nature-1" class="nav-link" data-scroll-target="#nature-1">Nature</a></li>
+  <li><a href="#tfc" id="toc-tfc" class="nav-link" data-scroll-target="#tfc">TFC</a></li>
+  <li><a href="#tfc-and-nature" id="toc-tfc-and-nature" class="nav-link" data-scroll-target="#tfc-and-nature">TFC AND Nature</a></li>
   <li><a href="#r1" id="toc-r1" class="nav-link" data-scroll-target="#r1">R1</a></li>
   <li><a href="#r2" id="toc-r2" class="nav-link" data-scroll-target="#r2">R2</a></li>
   <li><a href="#r1-and-r2" id="toc-r1-and-r2" class="nav-link" data-scroll-target="#r1-and-r2">R1 AND R2</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <li><a href="#policy" id="toc-policy" class="nav-link" data-scroll-target="#policy">Policy</a></li>
+  <li><a href="#test---r1-and-r2-and-tfc-and-nature" id="toc-test---r1-and-r2-and-tfc-and-nature" class="nav-link" data-scroll-target="#test---r1-and-r2-and-tfc-and-nature">TEST - R1 AND R2 AND TFC AND Nature</a>
   <ul>
   <li><a href="#number-of-hits" id="toc-number-of-hits" class="nav-link" data-scroll-target="#number-of-hits">Number of hits</a></li>
   </ul></li>
@@ -3159,17 +3164,18 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="code-repo">Code repo</h2>
 <p><a href="https://github.com/IPBES-Data/IPBES_TCA_Ch5_inventoring_options">Github - private</a></p>
 </section>
-<section id="build-no-5" class="level2">
-<h2 class="anchored" data-anchor-id="build-no-5">Build No: 5</h2>
+<section id="build-no-28" class="level2">
+<h2 class="anchored" data-anchor-id="build-no-28">Build No: 28</h2>
 <p>%The BuidNo is automatically increased by one each time the report is rendered. It is used to indicate different renderings when the version stays the same%.</p>
 </section>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>All searches are done on all works in OpenAlex. The search in the TCA Corpus is not possibly at the moment, but we are working on it.</p>
+<p>All searches are done on Using the <a href="https://openalex.org/" target="_blank">OpenAlex</a> database.</p>
+<p>In addition, all searches are run in combination with the search term foir nature.</p>
 <section id="the-following-steps-will-be-done-in-documented-in-this-report" class="level3">
 <h3 class="anchored" data-anchor-id="the-following-steps-will-be-done-in-documented-in-this-report">The following steps will be done in documented in this report:</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" checked>Do asearch with <code>R1_st</code> and <code>R2_st</code> and determine the number of hits</label></li>
+<li><label><input type="checkbox">Do asearch with <code>R1_st</code> and <code>R2_st</code> and determine the number of hits</label></li>
 <li><label><input type="checkbox">Should the copplete <code>**R1** AND **R2**</code> be downloaded, or only a random subsets?</label></li>
 </ul>
 </section>
@@ -3178,64 +3184,172 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="step-1-determination-of-numbers">Step 1: Determination of numbers</h2>
 <p>The search terms are based on the <a href="https://docs.google.com/document/d/1_FmxYVhpv2Bu2Gbbxb7cWc49f3soFvc64Qau_x2RAqI" target="_blank">shared google doc</a>. They are cleaned up for the usage in <a href="https://openalex.org/" target="_blank">OpenAlex</a>.</p>
 </section>
-<section id="r1" class="level2">
-<h2 class="anchored" data-anchor-id="r1">R1</h2>
-<p>The search terms is <a href="input/R1.txt" target="_blank">R1</a></p>
+<section id="nature" class="level2">
+<h2 class="anchored" data-anchor-id="nature">Nature</h2>
+<p>The search terms is <a href="input/nature.txt" target="_blank">nature</a></p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>R1_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(R1_st),</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)[, <span class="st">&quot;count&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>nature_l_count <span class="ot">&lt;-</span> <span class="fu">sapply</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    nature_st_l,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>(st) {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(st),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        )[, <span class="st">&quot;count&quot;</span>]</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="r2" class="level2">
-<h2 class="anchored" data-anchor-id="r2">R2</h2>
-<p>The search terms is <a href="input/R2.txt" target="_blank">R2</a></p>
+<section id="nature-1" class="level2">
+<h2 class="anchored" data-anchor-id="nature-1">Nature</h2>
+<p>The search terms is <a href="input/nature.txt" target="_blank">nature</a></p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>R2_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(R2_st),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>nature_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(<span class="fu">paste0</span>(<span class="st">&quot;(&quot;</span>, nature_st, <span class="st">&quot;)&quot;</span>)),</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>)[, <span class="st">&quot;count&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="r1-and-r2" class="level2">
-<h2 class="anchored" data-anchor-id="r1-and-r2">R1 AND R2</h2>
-<p>The search term is <a href="input/R1.txt" target="_blank">R1</a> AND <a href="input/R2.txt" target="_blank">R2</a></p>
+<section id="tfc" class="level2">
+<h2 class="anchored" data-anchor-id="tfc">TFC</h2>
+<p>The search terms is <a href="input/tfc.txt" target="_blank">tfc</a></p>
 <div class="cell">
 <details class="code-fold">
 <summary>Show the code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>R1_R2_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(<span class="fu">paste0</span>(<span class="st">&quot;(&quot;</span>, R1_st, <span class="st">&quot;) AND (&quot;</span>, R2_st, <span class="st">&quot;)&quot;</span>)),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>tfc_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(<span class="fu">paste0</span>(<span class="st">&quot;(&quot;</span>, tfc_st, <span class="st">&quot;)&quot;</span>)),</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>)[, <span class="st">&quot;count&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="tfc-and-nature" class="level2">
+<h2 class="anchored" data-anchor-id="tfc-and-nature">TFC AND Nature</h2>
+<p>The search terms is <a href="input/tfc.txt" target="_blank">tfc</a> AND <a href="input/nature.txt" target="_blank">nature</a></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tfc_nature_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(<span class="fu">paste0</span>(<span class="st">&quot;(&quot;</span>, tfc_st, <span class="st">&quot;) AND (&quot;</span>, nature_st, <span class="st">&quot;)&quot;</span>)),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>)[, <span class="st">&quot;count&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="r1" class="level2">
+<h2 class="anchored" data-anchor-id="r1">R1</h2>
+<p>The search terms is <a href="input/R1.txt" target="_blank">R1</a> AND <a href="input/nature.txt" target="_blank">Nature</a></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>R1_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(<span class="fu">paste0</span>(<span class="st">&quot;(&quot;</span>, R1_st, <span class="st">&quot;) AND (&quot;</span>, nature_st, <span class="st">&quot;)&quot;</span>)),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>)[, <span class="st">&quot;count&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="r2" class="level2">
+<h2 class="anchored" data-anchor-id="r2">R2</h2>
+<p>The search terms is <a href="input/R2.txt" target="_blank">R2</a> AND <a href="input/nature.txt" target="_blank">Nature</a></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>R2_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(<span class="fu">paste0</span>(<span class="st">&quot;(&quot;</span>, R2_st, <span class="st">&quot;) AND (&quot;</span>, nature_st, <span class="st">&quot;)&quot;</span>)),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>)[, <span class="st">&quot;count&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="r1-and-r2" class="level2">
+<h2 class="anchored" data-anchor-id="r1-and-r2">R1 AND R2</h2>
+<p>The search term is <a href="input/R1.txt" target="_blank">R1</a> AND <a href="input/R2.txt" target="_blank">R2</a> AND <a href="input/nature.txt" target="_blank">Nature</a></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>R1_R2_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(<span class="fu">paste0</span>(<span class="st">&quot;(&quot;</span>, R1_st, <span class="st">&quot;) AND (&quot;</span>, R2_st, <span class="st">&quot;) AND (&quot;</span>, nature_st, <span class="st">&quot;)&quot;</span>)),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>)[, <span class="st">&quot;count&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="policy" class="level2">
+<h2 class="anchored" data-anchor-id="policy">Policy</h2>
+<p>The search terms is <a href="input/policy.txt" target="_blank">policy</a> AND <a href="input/nature.txt" target="_blank">Nature</a></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>policy_count <span class="ot">&lt;-</span> openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(<span class="fu">paste0</span>(<span class="st">&quot;(&quot;</span>, policy_st, <span class="st">&quot;) AND (&quot;</span>, nature_st, <span class="st">&quot;)&quot;</span>)),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>)[, <span class="st">&quot;count&quot;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="test---r1-and-r2-and-tfc-and-nature" class="level2">
+<h2 class="anchored" data-anchor-id="test---r1-and-r2-and-tfc-and-nature">TEST - R1 AND R2 AND TFC AND Nature</h2>
+<p>The search term is <a href="input/R1.txt" target="_blank">R1</a> AND <a href="input/R2.txt" target="_blank">R2</a> AND <a href="input/nature.txt" target="_blank">Nature</a></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Show the code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>nature_l_count <span class="ot">&lt;-</span> <span class="fu">sapply</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    nature_st_l,</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>(st) {</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        openalexR<span class="sc">::</span><span class="fu">oa_fetch</span>(</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">title_and_abstract.search =</span> <span class="fu">compact</span>(<span class="fu">paste0</span>(<span class="st">&quot;(&quot;</span>, R1_st, <span class="st">&quot;) AND (&quot;</span>, st, <span class="st">&quot;) AND (&quot;</span>, tfc_st, <span class="st">&quot;)&quot;</span>)),</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">count_only =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">verbose =</span> <span class="cn">TRUE</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        )[, <span class="st">&quot;count&quot;</span>]</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <section id="number-of-hits" class="level3">
 <h3 class="anchored" data-anchor-id="number-of-hits">Number of hits</h3>
 <ul>
-<li><strong>R1:</strong>: 102,410,997 hits</li>
-<li><strong>R2:</strong> 41,508,976 hits</li>
-<li><strong>R1 AND R2:</strong> 35,577,986 hits</li>
+<li><strong>nature:</strong> 24,157,634 hits <!-- - **nature_l:** 30,104,963 hits --></li>
+<li><strong>tfc:</strong> 18,331,245 hits</li>
+<li><strong>tfc AND nature:</strong> 4,548,060 hits</li>
+<li><strong>R1 AND nature:</strong> 17,231,273 hits</li>
+<li><strong>R2 AND nature:</strong> 7,330,433 hits</li>
+<li><strong>policy AND nature:</strong> 16,817,401 hits</li>
+<li><strong>R1 AND R2 AND nature:</strong> 6,777,173 hits</li>
 </ul>
-<p>These are numbers which can easily be downloaded, either as a single set or several random sets.</p>
 </section>
 </section>
 
