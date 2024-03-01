@@ -132,29 +132,7 @@ In addition, all searches are run in combination with the search term foir natur
 The search terms are based on the [shared google doc](https://docs.google.com/document/d/1_FmxYVhpv2Bu2Gbbxb7cWc49f3soFvc64Qau_x2RAqI){target=_blank}. They are cleaned up for the usage in [OpenAlex](https://openalex.org/){target=_blank}.
 
 
-## Nature
-
-The search terms is [nature](input/nature.txt){target=_blank}
-
-```{r}
-#| label: get_nature_l_count
-#|
-
-nature_l_count <- sapply(
-    nature_st_l,
-    function(st) {
-        openalexR::oa_fetch(
-            title_and_abstract.search = compact(st),
-            count_only = TRUE,
-            verbose = TRUE
-        )[, "count"]
-    }
-) |>
-    sum()
-```
-
-
-## Nature
+### Nature
 
 The search terms is [nature](input/nature.txt){target=_blank}
 
@@ -169,7 +147,7 @@ nature_count <- openalexR::oa_fetch(
 )[, "count"]
 ```
 
-## TFC
+### TFC
 
 The search terms is [tfc](input/tfc.txt){target=_blank}
 
@@ -185,7 +163,7 @@ tfc_count <- openalexR::oa_fetch(
 ```
 
 
-## TFC AND Nature
+### TFC AND Nature
 
 The search terms is [tfc](input/tfc.txt){target=_blank} AND [nature](input/nature.txt){target=_blank}
 
@@ -201,7 +179,7 @@ tfc_nature_count <- openalexR::oa_fetch(
 ```
 
 
-## R1
+### R1
 
 The search terms is [R1](input/R1.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
 
@@ -217,7 +195,7 @@ R1_count <- openalexR::oa_fetch(
 ```
 
 
-## R2
+### R2
 
 The search terms is [R2](input/R2.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
 
@@ -232,7 +210,7 @@ R2_count <- openalexR::oa_fetch(
 )[, "count"]
 ```
 
-## R1 AND R2
+### R1 AND R2
 
 The search term is [R1](input/R1.txt){target=_blank} AND [R2](input/R2.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
 
@@ -247,7 +225,7 @@ R1_R2_count <- openalexR::oa_fetch(
 )[, "count"]
 ```
 
-## Policy
+### Policy
 
 The search terms is [policy](input/policy.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
 
@@ -264,7 +242,46 @@ policy_count <- openalexR::oa_fetch(
 
 
 
-## TEST - R1 AND R2 AND TFC AND Nature
+
+
+## Results
+
+### Number of hits
+- **nature:** `r formatC(nature_count, format="f", big.mark=",", digits=0)` hits
+- **tfc:** `r formatC(tfc_count, format="f", big.mark=",", digits=0)` hits
+- **tfc AND nature:** `r formatC(tfc_nature_count, format="f", big.mark=",", digits=0)` hits
+- **R1 AND nature:** `r formatC(R1_count, format="f", big.mark=",", digits=0)` hits
+- **R2 AND nature:** `r formatC(R2_count, format="f", big.mark=",", digits=0)` hits
+- **R1 AND R2 AND nature:** `r formatC(R1_R2_count, format="f", big.mark=",", digits=0)` hits
+- **policy AND nature:** `r formatC(policy_count, format="f", big.mark=",", digits=0)` hits
+
+
+
+<!-- ## Nature
+
+The search terms is [nature](input/nature.txt){target=_blank}
+
+```{r}
+#| label: get_nature_l_count
+#| eval: false
+
+nature_l_count <- sapply(
+    nature_st_l,
+    function(st) {
+        openalexR::oa_fetch(
+            title_and_abstract.search = compact(st),
+            count_only = TRUE,
+            verbose = TRUE
+        )[, "count"]
+    }
+) |>
+    sum()
+``` -->
+
+
+
+
+<!-- ### TEST - R1 AND R2 AND TFC AND Nature
 
 The search term is [R1](input/R1.txt){target=_blank} AND [R2](input/R2.txt){target=_blank} AND [Nature](input/nature.txt){target=_blank}
 
@@ -285,15 +302,5 @@ nature_l_count <- sapply(
 ) |>
     sum()
 
-```
-
-### Number of hits
-- **nature:** `r formatC(nature_count, format="f", big.mark=",", digits=0)` hits
-<!-- - **nature_l:** `r formatC(nature_l_count, format="f", big.mark=",", digits=0)` hits -->
-- **tfc:** `r formatC(tfc_count, format="f", big.mark=",", digits=0)` hits
-- **tfc AND nature:** `r formatC(tfc_nature_count, format="f", big.mark=",", digits=0)` hits
-- **R1 AND nature:** `r formatC(R1_count, format="f", big.mark=",", digits=0)` hits
-- **R2 AND nature:** `r formatC(R2_count, format="f", big.mark=",", digits=0)` hits
-- **policy AND nature:** `r formatC(policy_count, format="f", big.mark=",", digits=0)` hits
-- **R1 AND R2 AND nature:** `r formatC(R1_R2_count, format="f", big.mark=",", digits=0)` hits
-
+``` 
+-->
