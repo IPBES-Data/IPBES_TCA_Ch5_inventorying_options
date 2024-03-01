@@ -1,0 +1,9 @@
+"case study" OR 
+case  OR 
+example OR 
+evaluation OR 
+solution OR 
+implementation OR 
+concrete OR 
+empirical OR 
+practical

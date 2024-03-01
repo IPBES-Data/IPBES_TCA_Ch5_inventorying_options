@@ -1,0 +1,103 @@
+act OR
+action OR
+option OR
+policy OR
+policies OR
+measure OR
+agenda OR
+government OR
+governance OR
+right OR
+value OR
+valuation OR
+power OR
+"business approach" OR
+"legal instrument" OR
+"regulatory instrument"  OR
+regulation  OR
+enforcement OR
+standard OR
+"governance framework" OR
+method OR
+"decision-making" OR
+plan OR
+strategy OR
+strategic OR
+evaluation OR
+assessment OR
+programm OR
+connect OR
+offset OR
+permit OR
+ban OR
+restriction OR
+control OR
+"education system" OR
+education OR
+awareness OR
+learning OR
+"knowledge system" OR
+"conservation approach" OR
+"restoration approach" OR
+monitoring OR
+inventor OR
+coordination OR
+"civic action" OR
+"collective action" OR
+"political action" OR
+"community action" OR
+"capacity building" OR
+pathway OR
+scenario OR
+model OR
+solution OR
+innovation OR
+incentive OR
+subsidy OR
+tax OR
+payment OR
+debt OR
+aid OR
+"fiscal transfer" OR
+investment OR
+finance OR
+financial OR
+product OR
+market OR
+account OR
+register OR
+funding OR
+consumption OR
+chain OR
+certification OR
+"participatory process" OR
+"deliberate process" OR
+pluralism OR
+agreement OR
+cooperation OR
+demand OR
+"policy context" OR
+scheme OR
+protect OR
+protection OR
+conserve OR 
+conservation OR 
+"cultural arrangement" OR
+practice OR
+technique OR
+infrastructure OR
+access OR
+"trade-off" OR
+NBSAP OR
+"legislative control" OR
+"legal restriction" OR
+"derivative trading" OR
+"commodity futures" OR
+"social responsibility" OR
+"marine areas" OR
+"multilateral agreements" OR
+transparency OR
+litigation OR
+labelling OR
+OEAM OR
+"co-management"
