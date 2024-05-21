@@ -1,3 +1,7 @@
+# This repo has bee superceded by [TCA Corpus repo](https://github.com/IPBES-Data/IPBES_TCA_Corpus)
+# The report can be found [at](https://ipbes-data.github.io/IPBES_TCA_Corpus/IPBES_TCA_Corpus_DMP.html#strategiesoptionsinstruments-for-transformative-change)
+
+
 # Transformative Change Assessment - Ch 5 - Inventory of Options
 
 [![DOI](https://zenodo.org/badge/DOI/99.9999/zenodo.9999999.svg)](https://doi.org/99.9999/zenodo.9999999)
